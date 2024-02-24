@@ -14,6 +14,7 @@ public class PlatformerControls : MonoBehaviour
 
     private GameObject player;
     private GameObject startingPoint;
+    public GameObject WinScreen;
 
     private void Start()
     {
@@ -69,6 +70,11 @@ public class PlatformerControls : MonoBehaviour
         if (collision.gameObject.tag == "Death")
         {
             player.transform.position = startingPoint.transform.position;
+        }
+
+        if (collision.gameObject.tag == "Goal")
+        {
+            WinScreen.SetActive(true);
         }
     }
 }

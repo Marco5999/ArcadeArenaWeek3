@@ -33,16 +33,18 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "PositionA")
         {
+            Debug.Log("Changing to B");
             movingToA = false;
             movingToB = true;
         }
 
         if (other.gameObject.tag == "PositionB")
         {
+            Debug.Log("Changing to A");
             movingToA = true;
             movingToB = false;
         }
