@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UILoader : MonoBehaviour
 {
-    public GameObject uiPrompt; // Reference to the UI element displaying the prompt
-    public string sceneToLoad; // Name of the scene to load when E is pressed
+    public GameObject uiPrompt; 
+    public string sceneToLoad; 
 
     private bool canEnterPortal = false;
 
@@ -15,8 +15,8 @@ public class UILoader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiPrompt.SetActive(true); // Activate the UI prompt
-            canEnterPortal = true; // Set flag to indicate that the player can enter the portal
+            uiPrompt.SetActive(true); 
+            canEnterPortal = true; 
         }
     }
 
@@ -24,8 +24,8 @@ public class UILoader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiPrompt.SetActive(false); // Deactivate the UI prompt
-            canEnterPortal = false; // Reset the flag
+            uiPrompt.SetActive(false); 
+            canEnterPortal = false; 
         }
     }
 
@@ -33,14 +33,14 @@ public class UILoader : MonoBehaviour
     {
         if (canEnterPortal && Input.GetKeyDown(KeyCode.E))
         {
-            // Load the desired scene when E is pressed
+            
             LoadScene();
         }
     }
 
     void LoadScene()
     {
-        // Load the scene with the specified name
+        
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
     }
 }

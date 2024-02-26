@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PortalLevel : MonoBehaviour
 {
-    public string sceneToLoad; // Name of the scene to load
+    public string sceneToLoad; 
 
     void OnTriggerEnter(Collider other)
     {
