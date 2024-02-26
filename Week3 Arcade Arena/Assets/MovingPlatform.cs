@@ -5,18 +5,12 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     public float speed;
-    public float movement;
+    private float movement;
 
     public GameObject PositionA;
     public GameObject PositionB;
     public bool movingToA = true;
     public bool movingToB;
-
-    void Start()
-    {
-        PositionA = GameObject.FindGameObjectWithTag("PositionA");
-        PositionB = GameObject.FindGameObjectWithTag("PositionB");
-    }
 
     void FixedUpdate()
     {
@@ -33,7 +27,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "PositionA")
         {
@@ -42,7 +36,7 @@ public class MovingPlatform : MonoBehaviour
             movingToB = true;
         }
 
-        if (other.gameObject.tag == "PositionB")
+        else if (other.gameObject.tag == "PositionB")
         {
             Debug.Log("Changing to A");
             movingToA = true;
