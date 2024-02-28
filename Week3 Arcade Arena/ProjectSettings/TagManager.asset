@@ -10,6 +10,7 @@ TagManager:
   - RespawnPoint
   - PositionA
   - Goal
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
