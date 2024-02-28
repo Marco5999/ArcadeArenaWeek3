@@ -4744,7 +4744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiPrompt: {fileID: 974023255}
-  sceneToLoad: TestSceneAli
+  sceneToLoad: SampleScene
 --- !u!4 &1854461986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467122, guid: 514630a4715471e4180ce9a0a6c5c236, type: 3}
