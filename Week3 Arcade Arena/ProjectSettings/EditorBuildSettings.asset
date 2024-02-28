@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes 1/SampleScene.unity
     guid: 50718e9a79c1f4878aa099b2a27ad510
+  - enabled: 1
+    path: Assets/Scenes/AndrewShootingRange.unity
+    guid: 8f4a034d04d5a69428707053109d2509
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

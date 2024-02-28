@@ -4564,7 +4564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiPrompt: {fileID: 1198568068}
-  sceneToLoad: TestSceneAli
+  sceneToLoad: AndrewShootingRange
 --- !u!1 &1770340596
 GameObject:
   m_ObjectHideFlags: 0
