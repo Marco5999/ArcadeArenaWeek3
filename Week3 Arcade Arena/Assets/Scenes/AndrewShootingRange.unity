@@ -2235,6 +2235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   range: 100
+  score: 0
   fpsCam: {fileID: 179603893}
 --- !u!1 &1600336041
 GameObject:

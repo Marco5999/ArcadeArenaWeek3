@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GunScript : MonoBehaviour
 {
     [SerializeField] float damage = 10f;
     [SerializeField] float range = 100f;
+    [SerializeField] int score = 0;
 
     [SerializeField] Camera fpsCam;
 
@@ -14,6 +17,8 @@ public class GunScript : MonoBehaviour
         {
             Shoot();
         }
+
+        WinCondition();
     }
 
     void Shoot()
@@ -27,7 +32,16 @@ public class GunScript : MonoBehaviour
             if (target != null)
             {
                 target.TakeDamage(damage);
+                score++;
             }
+        }
+    }
+
+    void WinCondition()
+    {
+        if (score == 8)
+        {
+            SceneManager.LoadScene("HubScene");
         }
     }
 }
