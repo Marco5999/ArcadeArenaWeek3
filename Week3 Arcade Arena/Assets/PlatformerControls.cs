@@ -48,7 +48,7 @@ public class PlatformerControls : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetKeyDown("g") && onGround)
+        if(Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             onGround = false;
             rigidBody.AddForce(Vector3.up * jumpSpeed * 100f);
